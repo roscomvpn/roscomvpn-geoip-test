@@ -28,14 +28,6 @@
       "type": "text",
       "action": "add",
       "args": {
-        "name": "directprepare",
-        "uri": "./CUSTOM-LIST-ADD.txt"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
         "name": "proxyprepare",
         "uri": "./antifilterdownload.txt"
       }
