@@ -38,10 +38,8 @@ jobs:
               sha: context.sha
             })
 
-      - name: Download Geobases
-        run: |
-          curl -L "https://dl.netsyms.net/dbs/geolite2/GeoLite2-Country-CSV.zip" -o GeoLite2-Country-CSV.zip
-          curl -L "https://github.com/sapics/ip-location-db/raw/refs/heads/main/dbip-geo-whois-asn-country-mmdb/dbip-geo-whois-asn-country.mmdb" -o dbip-geo-whois-asn-country.mmdb
+      - name: Download GeoLite2
+        run: curl -L "https://dl.netsyms.net/dbs/geolite2/GeoLite2-Country-CSV.zip" -o GeoLite2-Country-CSV.zip
 
       - name: Build Docker image
         run: docker build -t geoip-generator .

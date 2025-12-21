@@ -5,7 +5,7 @@
       "action": "add",
       "args": {
         "name": "prepare",
-        "uri": "./output/text/ru_geolite.txt"
+        "uri": "./output/text/ru.txt"
       }
     },
     {
@@ -13,23 +13,7 @@
       "action": "add",
       "args": {
         "name": "prepare",
-        "uri": "./output/text/by_geolite.txt"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "prepare",
-        "uri": "./output/text/ru_dbip.txt"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "prepare",
-        "uri": "./output/text/by_dbip.txt"
+        "uri": "./output/text/by.txt"
       }
     },
     {
