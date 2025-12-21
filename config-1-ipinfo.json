@@ -4,15 +4,17 @@
       "type": "ipinfoCountryMMDB",
       "action": "add",
       "args": {
-        "uri": "./country.mmdb",
-        "wantedList": ["ru", "by"]
+        "uri": "./country.mmdb"
       }
     }
   ],
   "output": [
     {
       "type": "text",
-      "action": "output"
+      "action": "output",
+      "args": {
+        "wantedList": ["ru", "by"]
+      }
     }
   ]
 }
