@@ -2,7 +2,7 @@
   "input": [
     {
       "type": "text",
-      "action": "add", 
+      "action": "add",
       "args": {
         "name": "direct",
         "uri": "./output/text/final.txt"
@@ -10,7 +10,7 @@
     },
     {
       "type": "text",
-      "action": "add", 
+      "action": "add",
       "args": {
         "name": "direct",
         "uri": "./output/text/private.txt"
