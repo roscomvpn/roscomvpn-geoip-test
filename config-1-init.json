@@ -11,18 +11,10 @@
       }
     },
     {
-      "type": "ipinfoCountryMMDB",
-      "action": "add",
-      "args": {
-        "uri": "https://ipinfo.io/data/free/country.mmdb?token=733332abe59b9c",
-        "wantedList": ["ru", "by"]
-      }
-    },
-    {
       "type": "dbipCountryMMDB",
       "action": "add",
       "args": {
-        "uri": "https://github.com/sapics/ip-location-db/raw/refs/heads/main/dbip-geo-whois-asn-country-mmdb/dbip-geo-whois-asn-country.mmdb",
+        "uri": "./dbip-geo-whois-asn-country.mmdb",
         "wantedList": ["ru", "by"]
       }
     },
