@@ -21,22 +21,6 @@
       "action": "add",
       "args": {
         "name": "prepare",
-        "uri": "./output/text/ru_ipinfo.txt"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "prepare",
-        "uri": "./output/text/by_ipinfo.txt"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "prepare",
         "uri": "./output/text/ru_dbip.txt"
       }
     },

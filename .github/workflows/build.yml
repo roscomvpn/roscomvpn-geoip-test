@@ -41,7 +41,6 @@ jobs:
       - name: Download Geobases
         run: |
           curl -L "https://dl.netsyms.net/dbs/geolite2/GeoLite2-Country-CSV.zip" -o GeoLite2-Country-CSV.zip
-          curl -L "https://ipinfo.io/data/free/country.mmdb?token=733332abe59b9c" -o country.mmdb
           curl -L "https://github.com/sapics/ip-location-db/raw/refs/heads/main/dbip-geo-whois-asn-country-mmdb/dbip-geo-whois-asn-country.mmdb" -o dbip-geo-whois-asn-country.mmdb
 
       - name: Build Docker image

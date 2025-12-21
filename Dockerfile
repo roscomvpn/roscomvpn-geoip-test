@@ -2,7 +2,7 @@ FROM golang:1.24-alpine
 
 RUN apk add --no-cache git curl unzip python3 py3-pip
 
-RUN git clone https://github.com/Loyalsoldier/geoip.git /geoip
+RUN git clone https://github.com/v2fly/geoip.git /geoip
 
 RUN curl -L -o /geoip/antifilterdownload.txt https://antifilter.download/list/allyouneed.lst
 
@@ -26,8 +26,6 @@ COPY . /geoip/
 
 RUN mkdir -p /geoip/geolite2
 
-COPY country.mmdb /geoip/
-
 COPY dbip-geo-whois-asn-country.mmdb /geoip/
 
 COPY GeoLite2-Country-CSV.zip /geoip/geolite2/
@@ -43,4 +41,4 @@ RUN go mod download
 
 RUN go build -o geoip
 
-CMD ["sh","-c","./geoip convert -c config-1-geolite.json && mv ./output/text/ru.txt ./output/text/ru_geolite.txt && mv ./output/text/by.txt ./output/text/by_geolite.txt && ./geoip convert -c config-1-ipinfo.json && mv ./output/text/ru.txt ./output/text/ru_ipinfo.txt && mv ./output/text/by.txt ./output/text/by_ipinfo.txt && ./geoip convert -c config-1-dbip.json && mv ./output/text/ru.txt ./output/text/ru_dbip.txt && mv ./output/text/by.txt ./output/text/by_dbip.txt && ./geoip convert -c config-2-sum.json && python3 ipset_ops.py --mode diff --A ./output/text/prepare.txt --B ./antifilterdownload.txt,./refilter.txt,./antifilternetworksum.txt,./antifilternetworksubnet.txt,./antifilterdownloadcommunity.txt,./refiltercommunity.txt,./antifilternetworkcommunity.txt,./cdn.lst,./merged.sum,./CUSTOM-LIST-DEL.txt --out ./output/text/final.txt && ./geoip convert -c config-3-cut.json"]
+CMD ["sh","-c","./geoip -c config-1-geolite.json && mv ./output/text/ru.txt ./output/text/ru_geolite.txt && mv ./output/text/by.txt ./output/text/by_geolite.txt && ./geoip -c config-1-dbip.json && mv ./output/text/ru.txt ./output/text/ru_dbip.txt && mv ./output/text/by.txt ./output/text/by_dbip.txt && ./geoip -c config-2-sum.json && python3 ipset_ops.py --mode diff --A ./output/text/prepare.txt --B ./antifilterdownload.txt,./refilter.txt,./antifilternetworksum.txt,./antifilternetworksubnet.txt,./antifilterdownloadcommunity.txt,./refiltercommunity.txt,./antifilternetworkcommunity.txt,./cdn.lst,./merged.sum,./CUSTOM-LIST-DEL.txt --out ./output/text/final.txt && ./geoip -c config-3-cut.json"]

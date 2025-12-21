@@ -4,17 +4,15 @@
       "type": "dbipCountryMMDB",
       "action": "add",
       "args": {
-        "uri": "./dbip-geo-whois-asn-country.mmdb"
+        "uri": "./dbip-geo-whois-asn-country.mmdb",
+        "wantedList": ["ru", "by"]
       }
     }
   ],
   "output": [
     {
       "type": "text",
-      "action": "output",
-      "args": {
-        "wantedList": ["ru", "by"]
-      }
+      "action": "output"
     }
   ]
 }
