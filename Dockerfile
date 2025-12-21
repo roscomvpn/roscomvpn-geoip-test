@@ -2,7 +2,7 @@ FROM golang:1.24-alpine
 
 RUN apk add --no-cache git curl unzip python3 py3-pip
 
-RUN git clone https://github.com/v2fly/geoip.git /geoip
+RUN git clone https://github.com/Loyalsoldier/geoip.git /geoip
 
 RUN curl -L -o /geoip/antifilterdownload.txt https://antifilter.download/list/allyouneed.lst
 
