@@ -11,6 +11,14 @@
       }
     },
     {
+      "type": "ipinfoCountryMMDB",
+      "action": "add",
+      "args": {
+        "uri": "./country.mmdb",
+        "wantedList": ["ru", "by"]
+      }
+    },
+    {
       "type": "dbipCountryMMDB",
       "action": "add",
       "args": {
@@ -28,8 +36,8 @@
 	    "args": {
 		    "name": "private",
 		    "ipOrCIDR": ["0.0.0.0/8"]
-    }
-	}
+    	}
+	  }
   ],
   "output": [
     {
