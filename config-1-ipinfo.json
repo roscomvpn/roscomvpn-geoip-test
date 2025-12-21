@@ -1,0 +1,18 @@
+{
+  "input": [
+    {
+      "type": "ipinfoCountryMMDB",
+      "action": "add",
+      "args": {
+        "uri": "./country.mmdb",
+        "wantedList": ["ru", "by"]
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "text",
+      "action": "output"
+    }
+  ]
+}
