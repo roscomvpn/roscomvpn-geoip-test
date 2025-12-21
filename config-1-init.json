@@ -14,7 +14,7 @@
       "type": "ipinfoCountryMMDB",
       "action": "add",
       "args": {
-        "uri": "country.mmdb",
+        "uri": "./country.mmdb",
         "wantedList": ["ru", "by"]
       }
     },
@@ -22,7 +22,7 @@
       "type": "dbipCountryMMDB",
       "action": "add",
       "args": {
-        "uri": "dbip-geo-whois-asn-country.mmdb",
+        "uri": "./dbip-geo-whois-asn-country.mmdb",
         "wantedList": ["ru", "by"]
       }
     },
